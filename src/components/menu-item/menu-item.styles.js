@@ -1,33 +1,48 @@
 import styled from "styled-components/macro";
 
 export const Container = styled.div`
-	min-width: 30%;
-	height: 240px;
+	width: 45%;
+	min-width: 100px;
+	max-height: 400px;
 	flex: 1 1 auto;
 	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 	align-items: center;
-	justify-content: center;
-	border: 1px solid black;
-	margin: 0 7.5px 15px;
-	overflow: hidden;
+	margin: 10px;
+	background-color: white;
+	z-index: 1;
+
+	Button {
+		background-color: #f0c14b;
+		border: 1px solid;
+		border-color: #a88734 #9c7e31 #846a29;
+		width: fit-content;
+		align-self: center;
+		margin-bottom: 10px;
+	}
+	&.medium {
+		width: 30%;
+	}
 `;
 
-export const Title = styled.p`
-	text-align: left;
-	margin-top: 0;
+export const Info = styled.div`
+	height: 100px;
+	margin-bottom: 15px;
 `;
+
+export const Title = styled.p``;
 
 export const Price = styled.p`
-	font-weight: bold;
-	text-align: left;
+	margin-top: 5px;
 `;
 
 export const Image = styled.img`
-	height: 200px;
+	width: 100%;
+	max-height: 200px;
+	object-fit: contain;
+	margin-bottom: 15px;
 `;
-
-export const Button = styled.button``;
-
 export const Rating = styled.div`
-	text-align: left;
+	display: flex;
 `;
