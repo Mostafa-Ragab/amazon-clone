@@ -8,10 +8,11 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	align-items: center;
+	/* align-items: center; */
 	margin: 10px;
 	background-color: white;
 	z-index: 1;
+	padding: 20px;
 
 	Button {
 		background-color: #f0c14b;
@@ -33,7 +34,7 @@ export const Info = styled.div`
 
 export const Title = styled.p``;
 
-export const Price = styled.p`
+export const Price = styled.h3`
 	margin-top: 5px;
 `;
 
