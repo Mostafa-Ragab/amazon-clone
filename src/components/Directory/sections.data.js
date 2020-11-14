@@ -24,6 +24,7 @@ const sections = [
 			"https://images-na.ssl-images-amazon.com/images/I/71mQ9oKDMLL._SX522_.jpg", // local file in public/images/
 		rating: 3,
 		id: 3,
+		size: "medium",
 	},
 	{
 		title: "React.js Essentials Paperback – Import, 27 August 2015",
@@ -32,6 +33,7 @@ const sections = [
 			"https://images-na.ssl-images-amazon.com/images/I/41-HWOw--cL._SX404_BO1,204,203,200_.jpg", // local file in public/images/
 		rating: 3,
 		id: 4,
+		size: "medium",
 	},
 	{
 		title: "I Too Had a Love Story Paperback – 6 November 2013",
@@ -40,6 +42,7 @@ const sections = [
 			"https://images-na.ssl-images-amazon.com/images/I/51JdOfIHZ9L._SX324_BO1,204,203,200_.jpg", // local file in public/images/
 		rating: 5,
 		id: 5,
+		size: "medium",
 	},
 	{
 		title:
