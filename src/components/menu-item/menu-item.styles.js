@@ -23,7 +23,7 @@ export const Container = styled.div`
 		margin-bottom: 10px;
 	}
 	&.medium {
-		width: 30%;
+		width: 25%;
 	}
 `;
 
