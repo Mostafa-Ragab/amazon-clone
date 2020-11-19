@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FormInput from "../../components/form-input/form-input";
 import "./sign-up.css";
 import { Link } from "react-router-dom";
-
+import { auth } from "../../components/firebase/firebase";
 const SignUp = () => {
 	const [useCredentials, setCredentials] = useState({
 		name: "",
@@ -13,6 +13,12 @@ const SignUp = () => {
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
+		auth
+			.createUserWithEmailAndPassword(email, password)
+			.then((auth) => {
+				history.push("/");
+			})
+			.catch((e) => alert(e.message));
 	};
 	const handleChange = (event) => {
 		const { value, name } = event.target;
