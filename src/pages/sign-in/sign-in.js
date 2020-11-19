@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import CustomButton from "../../components/custom-button/custom-button";
 import FormInput from "../../components/form-input/form-input";
 import "./sign-in.css";
 import { Link } from "react-router-dom";
-
 const SignIn = () => {
 	const [useCredentials, setCredentials] = useState({
 		email: "",
@@ -48,7 +46,7 @@ const SignIn = () => {
 					value={password}
 					required
 				/>
-				<button className="signin-button " type="submit">
+				<button className="signin-button" type="submit">
 					{" "}
 					Sign in
 				</button>
@@ -57,9 +55,11 @@ const SignIn = () => {
 					see our Privacy Notice, our Cookies Notice and our Interest-Based Ads
 					Notice.
 				</p>
-				<button className="register-button" type="submit">
-					Create your Amazon Account
-				</button>
+				<Link to="/signup">
+					<button className="register-button" type="submit">
+						Create your Amazon Account
+					</button>
+				</Link>
 			</form>
 		</div>
 	);
