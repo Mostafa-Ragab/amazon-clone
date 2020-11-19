@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./cutsom-button.css";
+import "./custom-button.css";
 
 const CustomButton = ({ children }) => (
 	<button className="custom-button">{children}</button>

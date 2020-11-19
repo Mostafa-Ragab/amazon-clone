@@ -1,0 +1,12 @@
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input {
+  margin-bottom: 5px;
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: white;
+  width: 98%;
+}
