@@ -27,19 +27,19 @@ const Header = () => (
 					<span className="header__optionLineTwo">sign in</span>
 				</Option>
 			</OptionLink>
-			<OptionLink>
+			<OptionLink to="/">
 				<Option>
 					<span className="header__optionLineOne">Returns</span>
 					<span className="header__optionLineTwo">Orders</span>
 				</Option>
 			</OptionLink>
-			<OptionLink>
+			<OptionLink to="/">
 				<Option>
 					<span className="header__optionLineOne">Your</span>
 					<span className="header__optionLineTwo">Prime</span>
 				</Option>
 			</OptionLink>
-			<OptionLink>
+			<OptionLink to="/">
 				<Option>
 					<ShoppingBasketIcon className="basket" />
 					<span className="header__optionLineTwo basket-count">222</span>
