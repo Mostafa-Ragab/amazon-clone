@@ -13,6 +13,8 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { auth } from "../../firebase/firebase";
 const Header = ({ currentUser }) => (
 	<HeaderContainer>
+		{console.log("user", currentUser)}
+
 		<LogoContainer to="/">
 			<img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="logo" />
 		</LogoContainer>
@@ -22,7 +24,7 @@ const Header = ({ currentUser }) => (
 		</HeaderSearch>
 		<OptionContainer>
 			{currentUser ? (
-				<OptionLink to="/signout">
+				<OptionLink to="/">
 					<Option>
 						<span className="header__optionLineOne">Hello</span>
 						<span
