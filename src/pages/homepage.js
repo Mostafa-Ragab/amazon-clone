@@ -4,9 +4,9 @@ import sections from "./sections.data";
 import MenuItem from "../components/menu-item/menu-item";
 import Header from "../components/header/header";
 
-const HomePage = () => (
+const HomePage = ({ currentUser }) => (
 	<>
-		<Header />
+		<Header currentUser={currentUser} />
 		<div className="home">
 			<img
 				className="home__image"
