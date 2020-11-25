@@ -2,15 +2,25 @@ import React, { useState } from "react";
 import FormInput from "../../components/form-input/form-input";
 import "./sign-in.css";
 import { Link } from "react-router-dom";
+import { auth, signInWithGoogle } from "../../firebase/firebase";
 const SignIn = () => {
 	const [useCredentials, setCredentials] = useState({
 		email: "",
 		password: "",
 	});
+
 	const { email, password } = useCredentials;
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
+		const { email, password } = useCredentials;
+
+		try {
+			await auth.signInWithEmailAndPassword(email, password);
+			setCredentials({ email: "", password: "" });
+		} catch (error) {
+			console.log(error);
+		}
 	};
 	const handleChange = (event) => {
 		const { value, name } = event.target;
@@ -49,6 +59,14 @@ const SignIn = () => {
 				<button className="signin-button" type="submit">
 					{" "}
 					Sign in
+				</button>
+				<button
+					className="signin-button"
+					type="submit"
+					onClick={signInWithGoogle}
+				>
+					{" "}
+					Sign in with Google
 				</button>
 				<p className="detials">
 					By signing-in you agree to Amazon's Conditions of Use & Sale. Please
