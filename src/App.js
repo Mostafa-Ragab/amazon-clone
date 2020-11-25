@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/homepage";
 import SignIn from "./pages/sign-in/sign-in";
@@ -48,8 +48,20 @@ class App extends Component {
 						path="/"
 						component={(_) => <HomePage currentUser={this.state.currentUser} />}
 					/>
-					<Route exact path="/signin" component={SignIn} />
-					<Route exact path="/signup" component={SignUp} />
+					<Route
+						exact
+						path="/signin"
+						render={() =>
+							this.state.currentUser ? <Redirect to="/" /> : <SignIn />
+						}
+					/>
+					<Route
+						exact
+						path="/signup"
+						render={() =>
+							this.state.currentUser ? <Redirect to="/" /> : <SignUp />
+						}
+					/>
 				</Switch>
 			</div>
 		);
