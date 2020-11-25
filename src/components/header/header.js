@@ -10,8 +10,8 @@ import {
 } from "./styles/headet.styles";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
-
-const Header = () => (
+import { auth } from "../../firebase/firebase";
+const Header = ({ currentUser }) => (
 	<HeaderContainer>
 		<LogoContainer to="/">
 			<img src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="logo" />
@@ -21,12 +21,26 @@ const Header = () => (
 			<SearchIcon className="search-icon" />
 		</HeaderSearch>
 		<OptionContainer>
-			<OptionLink to="/signin">
-				<Option>
-					<span className="header__optionLineOne">Hello</span>
-					<span className="header__optionLineTwo">sign in</span>
-				</Option>
-			</OptionLink>
+			{currentUser ? (
+				<OptionLink to="/signout">
+					<Option>
+						<span className="header__optionLineOne">Hello</span>
+						<span
+							className="header__optionLineTwo"
+							onClick={() => auth.signOut()}
+						>
+							SIGN OUT
+						</span>
+					</Option>
+				</OptionLink>
+			) : (
+				<OptionLink to="/signin">
+					<Option>
+						<span className="header__optionLineOne">Hello</span>
+						<span className="header__optionLineTwo">sign in</span>
+					</Option>
+				</OptionLink>
+			)}
 			<OptionLink to="/">
 				<Option>
 					<span className="header__optionLineOne">Returns</span>
