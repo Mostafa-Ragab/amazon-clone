@@ -5,7 +5,7 @@ import HomePage from "./pages/homepage";
 import SignIn from "./pages/sign-in/sign-in";
 import SignUp from "./pages/sign-up/sign-up";
 import { auth, createUserProfileDocument } from "./firebase/firebase";
-
+import Checkout from "./pages/checkout-page/checkout-page";
 class App extends Component {
 	constructor() {
 		super();
@@ -43,6 +43,11 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Switch>
+					<Route
+						exact
+						path="/checkout"
+						component={(_) => <Checkout currentUser={this.state.currentUser} />}
+					/>
 					<Route
 						exact
 						path="/"
