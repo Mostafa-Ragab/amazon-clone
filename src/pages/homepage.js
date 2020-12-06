@@ -3,7 +3,7 @@ import "./home.css";
 import sections from "./sections.data";
 import MenuItem from "../components/menu-item/menu-item";
 import Header from "../components/header/header";
-
+import Footer from "../components/footer/footer";
 const HomePage = ({ currentUser }) => (
 	<>
 		<div className="home">
@@ -18,6 +18,8 @@ const HomePage = ({ currentUser }) => (
 					<MenuItem key={id} {...restProps} />
 				))}
 			</div>
+			<div className="break">Back to top</div>
+			<Footer />
 		</div>
 	</>
 );
