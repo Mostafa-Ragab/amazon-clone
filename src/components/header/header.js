@@ -55,7 +55,7 @@ const Header = ({ currentUser }) => (
 					<span className="header__optionLineTwo">Prime</span>
 				</Option>
 			</OptionLink>
-			<OptionLink to="/">
+			<OptionLink to="/checkout">
 				<Option>
 					<ShoppingBasketIcon className="basket" />
 					<span className="header__optionLineTwo basket-count">222</span>
